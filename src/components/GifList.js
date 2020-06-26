@@ -5,15 +5,17 @@ export default class GifList extends React.Component {
   displayGifs = () => {
     return this.props.gifs.map(gif => {
       return (
-        <div key={gif.id}>
-          <img alt="gif" src={gif.url}></img>
-        </div>
+        <li key={gif.id}>
+          <img alt="gif" src={gif.url} width="300px"></img>
+        </li>
       )
     })
   }
   render() {
     return(
-      <div>{this.displayGifs()}</div>
+      <div>
+        <ul>{this.displayGifs()}</ul>
+      </div>
     )
   }
 }
